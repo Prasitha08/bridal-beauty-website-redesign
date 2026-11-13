@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bridal Beauty Hub | Website Redesign Concept</title>
+<style>
+:root{--cream:#fffaf6;--paper:#fff;--blush:#f4e5df;--rose:#d9aaa0;--gold:#ad795d;--brown:#493331;--ink:#2e2524;--muted:#7b6b68;--line:#eadbd5;--sage:#75816d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+button,input{font:inherit}a{color:inherit;text-decoration:none}.announcement{background:var(--brown);color:#fff;text-align:center;padding:9px 16px;font:12px Arial,sans-serif;letter-spacing:.06em}
+header{position:sticky;top:0;z-index:10;background:#fffaf6ed;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;padding:17px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:22px;letter-spacing:.08em;font-weight:bold;color:var(--brown)}.brand small{display:block;font:9px Arial,sans-serif;letter-spacing:.28em;color:var(--gold);margin-top:4px}
+.links{display:flex;gap:27px;font:13px Arial,sans-serif;color:#594744}.links a:hover{color:var(--gold)}
+.navbtn,.primary{border:0;background:var(--brown);color:white;padding:13px 20px;border-radius:2px;cursor:pointer;font:12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.menu{display:none;border:1px solid var(--line);background:white;padding:8px 12px}
+.hero{max-width:1180px;margin:0 auto;padding:54px 24px 68px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.eyebrow{font:11px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+h1{font-size:clamp(42px,5vw,66px);line-height:1.04;font-weight:normal;margin:18px 0;color:var(--brown)}
+.hero p{font:15px/1.8 Arial,sans-serif;color:var(--muted);max-width:470px}
+.actions{display:flex;gap:12px;align-items:center;margin-top:27px;flex-wrap:wrap}.secondary{border:1px solid var(--gold);background:transparent;color:var(--brown);padding:12px 18px;font:12px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.hero-art{min-height:460px;background:linear-gradient(145deg,#ead4ca,#c49b8c 58%,#87675d);position:relative;overflow:hidden}
+.hero-art:before{content:"";position:absolute;width:65%;height:88%;border:1px solid #fff9;left:17%;top:6%;border-radius:48% 48% 3px 3px}
+.hero-art:after{content:"BRIDAL BEAUTY";position:absolute;bottom:24px;left:0;right:0;text-align:center;color:#fff;font:11px Arial,sans-serif;letter-spacing:.35em}
+.art-circle{position:absolute;width:190px;height:250px;border-radius:50% 50% 45% 45%;background:linear-gradient(135deg,#f3dfd5,#9b6e61);left:calc(50% - 95px);top:100px;box-shadow:0 25px 55px #4c2d2844}
+.art-flower{position:absolute;width:95px;height:95px;border-radius:50%;border:16px double #fff8;right:11%;top:16%}
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:70px;padding:23px 15px;font:12px Arial,sans-serif;color:var(--muted);flex-wrap:wrap}
+.stats b{color:var(--brown);font-family:Georgia,serif;font-size:20px;margin-right:7px}
+.section{max-width:1180px;margin:auto;padding:72px 24px}.section-head{text-align:center;margin-bottom:35px}.section-head h2{font-size:38px;font-weight:normal;color:var(--brown);margin:12px 0}.section-head p{font:14px/1.7 Arial,sans-serif;color:var(--muted)}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.category{background:#fff;border:1px solid var(--line);padding:27px 20px;text-align:center;transition:.2s;cursor:pointer}.category:hover{transform:translateY(-4px);box-shadow:0 12px 28px #49333112}
+.category .symbol{font-size:30px;color:var(--gold)}.category h3{font-weight:normal;font-size:20px;margin:13px 0 6px}.category p{font:12px Arial,sans-serif;color:var(--muted);margin:0}
+.featured{background:#f5ebe6}.provider-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.provider{background:white;border:1px solid var(--line)}.photo{height:210px;background:linear-gradient(135deg,#e9d1c8,#b88c7d);display:grid;place-items:center;color:#fff;font:11px Arial,sans-serif;letter-spacing:.18em}
+.photo.two{background:linear-gradient(135deg,#e8d7c8,#a58b76)}.photo.three{background:linear-gradient(135deg,#e8cfc9,#9c7370)}
+.provider-info{padding:19px}.provider-info h3{font-size:21px;font-weight:normal;margin:0 0 8px}.provider-info p{font:12px/1.6 Arial,sans-serif;color:var(--muted);margin:5px 0}.price{color:var(--gold);font:13px Arial,sans-serif;margin-top:13px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.split-art{min-height:330px;background:linear-gradient(145deg,#d9c0b4,#f0e2da);display:grid;place-items:center;color:#fff;font:12px Arial,sans-serif;letter-spacing:.2em}.split h2{font-size:40px;font-weight:normal;color:var(--brown);line-height:1.1}.split p{font:14px/1.8 Arial,sans-serif;color:var(--muted)}
+.cta{background:var(--brown);color:white;text-align:center;padding:65px 20px}.cta h2{font-size:38px;font-weight:normal;margin:0 0 12px}.cta p{font:13px Arial,sans-serif;color:#eadbd5;margin-bottom:25px}.cta button{background:#f3e5de;color:var(--brown)}
+footer{background:#2f2423;color:#f5e9e4;padding:35px 24px}.foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font:12px Arial,sans-serif}.foot strong{font:20px Georgia,serif;letter-spacing:.08em}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#2f2423;color:white;padding:12px 18px;font:13px Arial,sans-serif;display:none;z-index:20}
+@media(max-width:800px){.links{display:none}.menu{display:block}.navbtn{padding:11px 13px}.hero{grid-template-columns:1fr;gap:25px;padding-top:38px}.hero-art{min-height:330px}.categories{grid-template-columns:repeat(2,1fr)}.provider-grid{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr;gap:25px}.stats{gap:20px}}
+@media(max-width:520px){.brand{font-size:18px}.hero{padding-left:18px;padding-right:18px}.hero-art{min-height:280px}.section{padding:52px 18px}.section-head h2,.split h2{font-size:31px}.categories,.provider-grid{grid-template-columns:1fr 1fr;gap:10px}.category{padding:20px 10px}.photo{height:140px}.provider-info{padding:12px}.provider-info h3{font-size:17px}.stats{justify-content:space-around}.stats span{width:40%;text-align:center}.cta h2{font-size:30px}}
+</style></head>
+<body>
+<div class="announcement">A LITTLE MORE MAGIC FOR YOUR BIG DAY · DISCOVER YOUR BRIDAL TEAM</div>
+<header><div class="nav"><a class="brand" href="#">BRIDAL BEAUTY HUB<small>YOUR DAY. YOUR BEAUTY.</small></a>
+<nav class="links"><a href="#services">Services</a><a href="#artists">Find Artists</a><a href="#about">Our Story</a><a href="#contact">Contact</a></nav>
+<button class="navbtn" onclick="notify('Sign-in flow preview')">Sign In</button><button class="menu" onclick="notify('Mobile navigation preview')">☰</button></div></header>
+<main>
+<section class="hero"><div><div class="eyebrow">The beginning of your bridal story</div><h1>Feel like the most beautiful version of you.</h1><p>Discover talented bridal makeup artists and beauty professionals. Explore services, compare details and plan your special-day look with confidence.</p><div class="actions"><button class="primary" onclick="document.querySelector('#artists').scrollIntoView()">Explore Artists</button><button class="secondary" onclick="document.querySelector('#services').scrollIntoView()">View Services</button></div></div>
+<div class="hero-art"><div class="art-circle"></div><div class="art-flower"></div></div></section>
+<div class="stats"><span><b>01</b> Curated professionals</span><span><b>02</b> Easy discovery</span><span><b>03</b> Thoughtful planning</span></div>
+<section class="section" id="services"><div class="section-head"><div class="eyebrow">Find your perfect service</div><h2>Everything for your bridal glow</h2><p>Explore the beauty services that make your celebration feel like you.</p></div>
+<div class="categories"><div class="category" onclick="notify('Bridal Makeup selected')"><div class="symbol">✧</div><h3>Bridal Makeup</h3><p>Classic to contemporary looks</p></div><div class="category" onclick="notify('Mehendi selected')"><div class="symbol">❋</div><h3>Mehendi</h3><p>Beautiful details and designs</p></div><div class="category" onclick="notify('Hair Styling selected')"><div class="symbol">⌁</div><h3>Hair Styling</h3><p>Styles for every ceremony</p></div><div class="category" onclick="notify('Nail Art selected')"><div class="symbol">◇</div><h3>Nail Art</h3><p>The finishing touch</p></div></div></section>
+<section class="featured" id="artists"><div class="section"><div class="section-head"><div class="eyebrow">Meet the creatives</div><h2>Artists worth celebrating</h2><p>Sample provider cards show how visitors can compare professionals.</p></div>
+<div class="provider-grid"><article class="provider"><div class="photo">ARTIST IMAGE</div><div class="provider-info"><h3>The Blush Studio</h3><p>Coimbatore · Bridal Makeup</p><p>Soft glam, traditional and reception looks.</p><div class="price">Services from ₹6,000</div></div></article>
+<article class="provider"><div class="photo two">ARTIST IMAGE</div><div class="provider-info"><h3>Petal & Pearl Beauty</h3><p>Salem · Makeup & Hair</p><p>Personalised looks for every celebration.</p><div class="price">Services from ₹5,500</div></div></article>
+<article class="provider"><div class="photo three">ARTIST IMAGE</div><div class="provider-info"><h3>Mehendi by Anu</h3><p>Erode · Mehendi</p><p>Intricate designs with thoughtful detail.</p><div class="price">Services from ₹2,000</div></div></article></div></div></section>
+<section class="section split" id="about"><div class="split-art">YOUR BRIDAL MOMENT</div><div><div class="eyebrow">A calmer way to plan</div><h2>Your day deserves thoughtful details.</h2><p>Choosing your beauty team should feel exciting, not overwhelming. Bridal Beauty Hub brings service information and provider discovery together in one welcoming place.</p><button class="primary" onclick="notify('About Bridal Beauty Hub')">Discover Our Story</button></div></section>
+<section class="cta" id="contact"><h2>Ready to find your bridal glow?</h2><p>Start exploring beauty professionals for your special day.</p><button class="primary" onclick="notify('Contact / enquiry preview')">Get Started</button></section>
+</main><footer><div class="foot"><strong>BRIDAL BEAUTY HUB</strong><span>Made for your once-in-a-lifetime moments.</span><span>© 2026 Bridal Beauty Hub · UI redesign concept</span></div></footer>
+<div class="toast" id="toast"></div>
+<script>let timer;function notify(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';clearTimeout(timer);timer=setTimeout(()=>t.style.display='none',2200)}</script>
+</body></html>
